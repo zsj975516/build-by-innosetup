@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+"use strict"
+
+if (process.argv.find(item => /^--help|-h$/.test(item))) {
+  console.log(`Options:
+  -V, --version  output the version number
+  -h, --help     output usage information
+  
+  -d, --dir      only pack nwjs
+  `)
+} else if (process.argv.find(item => /^--version|-V$/.test(item))) {
+  console.log(require('../package.json').version)
+} /*else if (process.argv.length > 2) {
+  console.log(`error: unknown option '${process.argv[2]}'`)
+} */else {
+  console.log('build project by [build-by-innosetup]')
+  require('../')()
+}

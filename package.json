@@ -1,0 +1,22 @@
+{
+  "name": "build-by-innosetup",
+  "version": "1.0.0",
+  "description": "使用innosetup和nw-builder打包",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "来日可期(1084172570@qq.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "art-template": "^4.13.2",
+    "chalk": "latest",
+    "iconv-lite": "^0.4.24",
+    "nw-builder": "^3.5.7",
+    "yamljs": "^0.3.0"
+  },
+  "bin": {
+    "nw-build": "bin/build"
+  }
+}
