@@ -26,13 +26,13 @@ async function makeUpgrade (config) {
     let files = fileNames.reduce((old, item) => {
       let stat = fs.statSync(path.resolve(basePath, item))
       let file
-      if (/32/i.test(item)) {
+      if (/win32/i.test(item)) {
         file = old[32]
       } else {
         file = old[64]
       }
       if (stat.mtimeMs > file.time) {
-        file.platform = /x32/i.test(item) ? 'win32' : 'win64'
+        file.platform = /win32/i.test(item) ? 'win32' : 'win64'
         file.url = item
         file.time = stat.mtimeMs
         file.size = stat.size

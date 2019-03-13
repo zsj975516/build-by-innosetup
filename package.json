@@ -1,6 +1,6 @@
 {
   "name": "build-by-innosetup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "使用innosetup和nw-builder打包",
   "main": "index.js",
   "scripts": {
