@@ -66,7 +66,9 @@
 
 [Icons]
   Name: "{commonprograms}\{#AppName}"; Filename: "{app}\{#AppExeName}"
+  {{if createDesktopIcon}}
   Name: "{commondesktop}\{#AppName}"; Filename: "{app}\{#AppExeName}"; Tasks: desktopicon
+  {{/if}}
 
 [Registry]
   {{each Registry registry index}}
