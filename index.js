@@ -11,7 +11,8 @@ const resolvePath = function () {
 let project_package = require(resolvePath('package.json'))
 
 module.exports = async function () {
-  if (!project_package.build) throw new Error('')
+  if (!project_package.build) throw new Error('请在package.json中添加build')
+  if (project_package.build.createDesktopIcon === undefined) project_package.build.createDesktopIcon = true
   let nwBuilder = {
     files: project_package.build.files,
     platforms: project_package.build.platforms || ['win'],

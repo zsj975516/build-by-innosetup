@@ -51,7 +51,9 @@
   Name: "chinesesimp"; MessagesFile: "compiler:Default.isl"
 
 [Tasks]
+  {{if createDesktopIcon}}
   Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: checkedonce;
+  {{/if}}
 
 [Files]
   ; 注意: 不要在任何共享系统文件上使用“Flags: ignoreversion”
