@@ -40,7 +40,7 @@ async function build (config) {
       p.stdout.on('exit', () => resolve())
     })
 
-    // fs.unlinkSync(buidISS)
+    fs.unlinkSync(buidISS)
   } catch (e) {
     throw e
   }
